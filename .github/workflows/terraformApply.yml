@@ -39,6 +39,7 @@ jobs:
           run: terraform apply -auto-approve
 
   destroy:
+     needs: terraform
      name: "Terraform destroy"
      runs-on: ubuntu-latest
      env:
