@@ -38,4 +38,22 @@ jobs:
           if: github.event_name == 'push'
           run: terraform apply -auto-approve
 
+  destroy:
+     name: "Terraform destroy"
+     runs-on: ubuntu-latest
+     env:
+        AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
+        AWS_SECRET_ACCESS_KEY: ${{secrets.SECRET_KEY}}
+        AWS_DEFAULT_REGION: ap-south-1
+     steps: 
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Setup Terraform
+          uses: hashicorp/setup-terraform@v1
+        - name: Terraform Destroy
+          id: destroy
+          run: terraform destroy -auto-approve
+        
+         
+
  
