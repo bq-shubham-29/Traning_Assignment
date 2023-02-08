@@ -9,9 +9,10 @@ jobs:
   terraform:
      name: "Terraform"
      runs-on: self-hosted
-     steps:
-        - name: print
-          uses: echo "shubham"
+     steps: 
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
     #  env:
     #     AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
     #     AWS_SECRET_ACCESS_KEY: ${{secrets.SECRET_KEY}}
