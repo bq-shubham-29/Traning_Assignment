@@ -35,6 +35,6 @@ jobs:
           run: exit 1
 
         - name: Terraform Apply
-          if: github_event_name == 'push'
+          if: github.event_name == 'push'
           run: terraform apply -auto-approve
          
