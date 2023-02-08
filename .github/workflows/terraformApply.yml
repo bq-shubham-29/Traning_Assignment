@@ -3,8 +3,7 @@ name: "Terraform-apply-infra"
 on:
   push:
     branches:
-      -Github-Actions
-  workflow_dispatch    
+      - Github-Actions   
 
 jobs:
   terraform:

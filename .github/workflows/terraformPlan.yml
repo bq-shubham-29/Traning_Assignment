@@ -3,7 +3,7 @@ name: "Terraform-plan-infra"
 on:
   push:
     branches:
-      -Github-Actions
+      - Github-Actions
 
 jobs:
   terraform:
