@@ -25,7 +25,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Give count to autoscaling group
         run: echo Hello, world!
-
+      
+      - name: Install awscli
+        run: |
+          sudo apt install awscli
+      
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
