@@ -5,17 +5,13 @@ on:
     inputs:
       count:
         type: number
-        
+        default: 2
 
 jobs:
   build:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
-
-      - name: Give count to autoscaling group
-        run: echo Hello, world!
-      
       
       - name: Run a multi-line script
         run: |
