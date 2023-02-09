@@ -21,6 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: aws-actions/configure-aws-credentials@v1
 
       # Runs a single command using the runners shell
       - name: Give count to autoscaling group
@@ -29,5 +30,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          aws autoscaling update-auto-scaling-group \
+                            --auto-scaling-group-name my-ASG \
+                            --min-size 2 \
+                            --max-size 10
