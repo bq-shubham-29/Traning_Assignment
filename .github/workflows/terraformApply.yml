@@ -3,7 +3,7 @@ name: "Terraform-apply-infra"
 on:
   push:
     branches:
-      - Github-Actions   
+      - Github-Actionss 
 
 jobs:
   terraform:
