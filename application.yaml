@@ -8,7 +8,7 @@ spec:
     namespace: myapp
     server: 'https://kubernetes.default.svc'
   source:
-    path: argo
+    path: dev
     repoURL: 'https://github.com/bq-shubham-29/Traning_Assignment.git'
     targetRevision: HEAD
   project: default
